@@ -11,7 +11,7 @@ public class Trybank
     //3 -> Saldo
     public int[,] Bank;
     public int registeredAccounts;
-    private int maxAccounts = 50;
+    private readonly int maxAccounts = 50;
     public Trybank()
     {
         loggedUser = -99;
@@ -56,7 +56,12 @@ public class Trybank
     // 3. Construa a funcionalidade de fazer Logout
     public void Logout()
     {
-        throw new NotImplementedException();
+        if (!Logged) {
+          throw new AccessViolationException("Usuário não está logado");
+        } else {
+          Logged = false;
+          loggedUser = -99;
+        }
     }
 
     // 4. Construa a funcionalidade de checar o saldo
