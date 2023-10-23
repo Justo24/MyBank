@@ -20,7 +20,7 @@ public class Trybank
         Bank = new int[maxAccounts, 4];
     }
 
-    // 1. Construa a funcionalidade de cadastrar novas contas
+    // Funcionalidade de cadastrar novas contas
     public void RegisterAccount(int number, int agency, int pass)
     {
         for (int i = 0; i < registeredAccounts; i++) {
@@ -35,7 +35,7 @@ public class Trybank
         registeredAccounts++;
     }
 
-    // 2. Construa a funcionalidade de fazer Login
+    // Funcionalidade de fazer Login
     public void Login(int number, int agency, int pass)
     {
         if (Logged) {
@@ -54,7 +54,7 @@ public class Trybank
         }
     }
 
-    // 3. Construa a funcionalidade de fazer Logout
+    // Funcionalidade de fazer Logout
     public void Logout()
     {
         if (!Logged) {
@@ -65,7 +65,7 @@ public class Trybank
         }
     }
 
-    // 4. Construa a funcionalidade de checar o saldo
+    // Funcionalidade de checar o saldo
     public int CheckBalance()
     {
         if (!Logged) {
@@ -75,7 +75,7 @@ public class Trybank
         }
     }
 
-    // 5. Construa a funcionalidade de depositar dinheiro
+    // Funcionalidade de depositar dinheiro
     public void Deposit(int value)
     {
         if (!Logged) {
@@ -85,7 +85,7 @@ public class Trybank
         }
     }
 
-    // 6. Construa a funcionalidade de sacar dinheiro
+    // Funcionalidade de sacar dinheiro
     public void Withdraw(int value)
     {
         if (!Logged) {
@@ -98,7 +98,7 @@ public class Trybank
         }
     }
 
-    // 7. Construa a funcionalidade de transferir dinheiro entre contas
+    // Funcionalidade de transferir dinheiro entre contas
     public void Transfer(int destinationNumber, int destinationAgency, int value)
     {
         if (!Logged) {
